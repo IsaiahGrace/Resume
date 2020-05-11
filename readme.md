@@ -6,46 +6,52 @@ github.com/IsaiahGrace
 
 (617) 901-2132
 
+
 ## Education
 
 Purdue University, West Lafayette IN: GPA 3.40
 
 Bachelor of Science in Computer Engineering, Minor in History
 
+
 ## Relevant Coursework
         
-* Data Structures and Algorithms
 * Computer Architecture
+* Data Structures and Algorithms
 * Digital design
 * Microcontrollers
 * Object Oriented Programming
-
+    
     
 ## Technical Skills
         
-* C/C++
 * Assembly
-* Java
-* Regular Expressions
-* SystemVerilog
-* Cadence software
-* Python
 * Bash
-* Git
-* Questa-Sim
-* Linux
-* PowerPoint
-* LaTeX
-* Matlab
-* Scheme
+* C/C++
+* Cadence software
 * FPGA Synthesis
-* Microsoft Office
+* Git
+* Java
 * KiCad PCB Layout
+* LaTeX
+* Linux
+* Matlab
+* Microsoft Office
+* PowerPoint
+* Python
+* Questa-Sim
+* Regular Expressions
+* Scheme
+* SystemVerilog
+  
   
 ## Research and Project Experience
         
 ### SOCET Research Team, Senior design project: Apr to Dec 2019
 Coordinated the work of two teammates in creating a custom layout for two logic cells. Specified, documented, and implemented the digital logic design for an APB bus peripheral device. Integrated the team project into the larger System on a Chip for fabrication at MIT Lincoln Labs.
+
+### Design and test of MIPS dual core processor: Sep to Dec 2019
+Designed, tested, implemented, and synthesized a MIPS based processor design featuring a five stage pipeline, and two cores with independent coherent L1 Caches. Used SystemVerilog to implement RTL logic and testbench scripts to validate design. Synthesized design to target an Altera Cyclone FPGA.
 
 ### Tetris hand-held console: Mar to May 2019
 Planned and organized a team of four in developing an STM32 based handheld Tetris console. Created an SPI driver for the embedded display using embedded C++ and assembly.
