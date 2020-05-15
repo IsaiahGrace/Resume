@@ -13,7 +13,7 @@
 % https://tex.stackexchange.com/questions/84061/how-can-i-make-a-bold-horizontal-rule-under-each-section-title
 \usepackage{titlesec}
 \titleformat{\section}
-  {\normalfont\large\bfseries}{\thesection}{1em}{\vspace{-12pt}}[{\vspace{-2pt}\titlerule[0.6pt]}]
+  {\normalfont\large\bfseries}{\thesection}{1em}{\vspace{-9pt}}[{\vspace{-2pt}\titlerule[0.6pt]\vspace{-3pt}}]
 
 \usepackage{changepage}
 
@@ -32,7 +32,7 @@
 % The geometry specified here will help the text fill the page and reduce the default margins  
 \usepackage{geometry}
 \geometry{
-	voffset=0in,
+	voffset=0.25in,
 	hoffset=0in,
 	textwidth=7in,
 	textheight=10in
@@ -47,11 +47,11 @@
 \end{center}
 
 \section*{Education}
-Purdue University, West Lafayette IN \hfill \textbf{GPA: 3.40}\\
+\textbf{Purdue University}, West Lafayette IN \hfill GPA: 3.40\\
 Bachelor of Science in Computer Engineering, Minor in History \hfill Aug 2015 -- Dec 2019
 
 \vspace{2pt}
-\textbf{Relevant Coursework:}
+Relevant Coursework:
 Data Structures \& Algorithms,
 Computer Architecture,
 Microcontrollers,
