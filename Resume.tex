@@ -13,7 +13,9 @@
 % https://tex.stackexchange.com/questions/84061/how-can-i-make-a-bold-horizontal-rule-under-each-section-title
 \usepackage{titlesec}
 \titleformat{\section}
-  {\normalfont\Large\bfseries}{\thesection}{1em}{}[{\titlerule[0.6pt]}]
+  {\normalfont\large\bfseries}{\thesection}{1em}{\vspace{-12pt}}[{\vspace{-2pt}\titlerule[0.6pt]}]
+
+\usepackage{changepage}
 
 % I will define a new command to handle each of the entries in the sections below
 %\resumeItem
@@ -22,7 +24,9 @@
 %{Text}
 \newcommand{\resumeItem}[3]{
 	\textbf{#1} \hfill #2\\
+	\begin{adjustwidth}{15pt}{}
 	#3
+	\end{adjustwidth}
 }
 
 % The geometry specified here will help the text fill the page and reduce the default margins  
@@ -31,7 +35,7 @@
 	voffset=0in,
 	hoffset=0in,
 	textwidth=7in,
-	textheight=9.75in
+	textheight=10in
 	}
 
 \begin{document}
@@ -86,10 +90,10 @@ ASIC design
 {Nov 2018}
 {Collaborated to design and test a USB interface module suitable for use on an SoC. Personally designed and wrote SystemVerilog code for the USB receiving/decoding submodule.}
 
-\resumeItem
-{Zork Text Adventure}
-{Oct 2018}
-{Partnered with another student to create a C++ version of the 1977 Zork text adventure game. Utilized Object Oriented Programming and git version control.}
+%\resumeItem
+%{Zork Text Adventure}
+%{Oct 2018}
+%{Partnered with another student to create a C++ version of the 1977 Zork text adventure game. Utilized Object Oriented Programming and git version control.}
 
 \resumeItem
 {\nth{1} place in Data Structures -- Big Data Challenge}
