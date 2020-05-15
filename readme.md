@@ -50,7 +50,7 @@ Bachelor of Science in Computer Engineering, Minor in History
   
 ## Research and Project Experience
         
-### Senior design team: Polymorphic logic: AUG to Dec 2019
+### Senior design team: Polymorphic logic: Aug to Dec 2019
 Investigated the design and integration of experimental ambipolar transistors using CMOS as a proxy. Personally specified, documented, and implemented the digital control modules for custom logic cells. Integrated the team project into the larger SoCET system on a chip for fabrication at MIT Lincoln Labs.
 
 ### MIPS dual-core processor: Sep to Dec 2019
@@ -89,4 +89,4 @@ Taught caving and whitewater kayaking skills from beginner through advanced leve
 ### Facilitator, participant: EMV sophomore leadership retreat: Sep 2016, 2017, 2018
 Participated in, and twice facilitated, a leadership retreat exploring inclusive leadership in the classroom and community.
 
-### Eagle Scout: BSA: 2014
+### Eagle Scout, BSA: 2014
