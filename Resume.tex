@@ -1,117 +1,139 @@
-\documentclass{article}
-\usepackage[super]{nth}
-\usepackage{changepage}
-\oddsidemargin=.15in
-\evensidemargin=.15in
-\textwidth=6in
-\topmargin=-0.8in
-\textheight=9.6in
-\parindent=0in
+%% Isaiah Grace
+%% May 14 2020
 
+\documentclass[10pt,letterpaper]{article}
+
+% This will be so that we can get a good looking 1st with supertext
+\usepackage[super]{nth}
+
+% This is so that we don't print the page number at the bottom
 \pagestyle{empty}
 
-\begin{document}
+% Thanks to this StackExchange answer, we can have a horizontal line under each section
+% https://tex.stackexchange.com/questions/84061/how-can-i-make-a-bold-horizontal-rule-under-each-section-title
+\usepackage{titlesec}
+\titleformat{\section}
+  {\normalfont\Large\bfseries}{\thesection}{1em}{}[{\titlerule[0.6pt]}]
 
+% I will define a new command to handle each of the entries in the sections below
+%\resumeItem
+%{Title}
+%{Dates}
+%{Text}
+\newcommand{\resumeItem}[3]{
+	\textbf{#1} \hfill #2\\
+	#3
+}
+
+% The geometry specified here will help the text fill the page and reduce the default margins  
+\usepackage{geometry}
+\geometry{
+	voffset=0in,
+	hoffset=0in,
+	textwidth=7in,
+	textheight=9.75in
+	}
+
+\begin{document}
+\raggedright
 \begin{center}
 	\Huge{Isaiah Robert Grace}\\
 	\vspace{6pt}
 	\large{(617) 901-2132 \hfill github.com/IsaiahGrace \hfill isaiah@graces.com}
 \end{center}
 
-{\large \bf Education}\\*[-.8pc]
-\underline{\hspace{6in}} \\
-Purdue University, West Lafayette IN \hfill {\bf GPA: 3.40}\\
-Bachelor of Science in Computer Engineering, Minor in History \hfill Aug 2015 -- Dec 2019\\
-\textbf{Relevant Coursework:} Data Structures \& Algorithms, Computer Architecture, Microcontrollers, Object Oriented Programming
-\vspace{5pt}\\
-{\large \bf Technical Skills} \\*[-.8pc]
-\underline{\hspace{6in}} \\
-%@{\extracolsep{\fill}}
+\section*{Education}
+Purdue University, West Lafayette IN \hfill \textbf{GPA: 3.40}\\
+Bachelor of Science in Computer Engineering, Minor in History \hfill Aug 2015 -- Dec 2019
+
+\vspace{2pt}
+\textbf{Relevant Coursework:}
+Data Structures \& Algorithms,
+Computer Architecture,
+Microcontrollers,
+Object Oriented Programming,
+Functional Programming,
+Artificial Intelligence,
+ASIC design
+
+
+\section*{Technical Skills}
 \begin{tabular*}{\textwidth}{llllll}
-	C/C\texttt{++} & Assembly & Java   & Regular Expressions & SystemVerilog    & Cadence software\\
+	C/C\texttt{++} & Assembly & Java   & Regular Expressions & SystemVerilog    & Cadence synthesis software\\
  	Python         & Bash     & Git    & Questa-Sim          & Linux            & PowerPoint\\
  	\LaTeX         & Matlab   & Scheme & FPGA Synthesis      & Microsoft Office & KiCad PCB Layout\\
 \end{tabular*}
 
-\vspace{5pt}{\large \bf Research and Project Experience} \\*[-.8pc]
-\underline{\hspace{6in}}
-{\bf SOCET Research Team, Senior design project} \hfill Apr -- Dec 2019
-\begin{adjustwidth}{20pt}{}
-Coordinated the work of two teammates in creating a custom layout for two logic cells.
-Specified, documented and implemented the digital logic design for an APB bus peripheral device.
-Integrated the team project into the larger System on a Chip for fabrication at MIT Lincoln Labs.
-\end{adjustwidth}
-{\bf Tetris hand-held console} \hfill Mar -- May 2019
-\begin{adjustwidth}{20pt}{}
-Planned and organized a team of four in developing a STM32 based handheld Tetris console.
-Created an SPI driver for the embedded display using embedded C\texttt{++} and assembly.
-\end{adjustwidth}
-{\bf ASIC Module Design for USB to AHB bridge} \hfill Nov 2018
-\begin{adjustwidth}{20pt}{}
-Collaborated to design and test a USB interface module suitable for use on an SoC.\\
-Personally designed and wrote SystemVerilog code for the USB receiving/decoding submodule.
-\end{adjustwidth}
-{\bf Zork Text Adventure} \hfill Oct 2018
-\begin{adjustwidth}{20pt}{}
-Partnered with another student to create a C\texttt{++} version of the 1977 Zork text adventure game.
-Utilized Object Oriented Programming and version control.
-\end{adjustwidth}
-{\bf \nth{1} place in Data Structures -- Big Data Challenge} \hfill Oct 2017
-\begin{adjustwidth}{20pt}{}
-Wrote and optimized Huffman encoding of arbitrarily large data input with multi-threading.
-Applied principals of data structures and algorithms to heavily optimize C code.\\
-Placed first of 83 students in fastest compression of 64GB of data.
-\end{adjustwidth}
 
-\vspace{5pt}{\large \bf Work Experience} \\*[-.8pc]
-\underline{\hspace{6in}}
+\section*{Research and Project Experience}
+\resumeItem
+{SOCET Research Team, Senior design project}
+{Apr -- Dec 2019}
+{Coordinated the work of two teammates in creating a custom layout for two logic cells. Specified, documented, and implemented the digital logic design for an APB bus peripheral device. Integrated the team project into the larger System on a Chip for fabrication at MIT Lincoln Labs.}
 
-\textbf{Student researcher:} Purdue SoCET team, physical design group\hfill Jun -- Aug 2019\\
-\vspace{-12pt}
-\begin{adjustwidth}{20pt}{}
-Developed layout, place and route, and floorplanning workflows using Cadence software for the SoCET System on a Chip physical design.
-\end{adjustwidth}
+\resumeItem
+{Design and test of MIPS dual core processor}
+{Sep -- Dec 2019}
+{Designed, tested, implemented, and synthesized a MIPS based processor design featuring a five stage pipeline, and two cores with independent coherent L1 Caches. Used SystemVerilog to implement RTL logic and testbench scripts to validate design. Synthesized design to target an Altera Cyclone FPGA.}
 
-\textbf{Grader:} ECE369 Discrete Mathematics \hfill Jan -- May 2019\\
-\vspace{-12pt}
-\begin{adjustwidth}{20pt}{}
-Graded Discrete Mathematics course assignments covering theory of computation, formal logic, graph theory, mathematical induction, state machines, and regular expressions.
-\end{adjustwidth}
+\resumeItem
+{Tetris hand-held game console}
+{Mar -- May 2019}
+{Planned and organized a team of four in developing an STM32 based handheld Tetris console. Created an SPI driver for the embedded display using embedded C++ and assembly.}
 
-\textbf{Raft Guide:} Outdoor Adventure Rafting \hfill May -- Aug 2018\\
-\vspace{-12pt}
-\begin{adjustwidth}{20pt}{}
-Guided on class IV-V whitewater. Responsible for customer satisfaction and safety in demanding and dynamic workplace environment. Certified Wilderness First Responder.\\
-\end{adjustwidth}
-\vspace{-12pt}
+\resumeItem
+{ASIC Module design for USB to AHB bridge}
+{Nov 2018}
+{Collaborated to design and test a USB interface module suitable for use on an SoC. Personally designed and wrote SystemVerilog code for the USB receiving/decoding submodule.}
 
-\textbf{Operator:} Purdue Rare Isotope Measurement Laboratory \hfill Jan 2016 -- May 2018\\
-\vspace{-12pt}
-\begin{adjustwidth}{20pt}{}
-Collected and verified data from Purdue's linear particle accelerator. Operated the accelerator during overnight shifts and responded to emergency shutdowns due to sparking in the accelerator chamber.\\
-\end{adjustwidth}
-\vspace{-12pt}
+\resumeItem
+{Zork Text Adventure}
+{Oct 2018}
+{Partnered with another student to create a C++ version of the 1977 Zork text adventure game. Utilized Object Oriented Programming and git version control.}
 
-%\textbf{Hang-Gliding Instructor:} Kitty Hawk Kites \hfill  May -- Aug 2017\\
-%\hspace*{20pt}Instructor for an introductory class on Hang-Gliding.
+\resumeItem
+{\nth{1} place in Data Structures -- Big Data Challenge}
+{Oct 2017}
+{Designed and optimized a Huffman encoding algorithm of an arbitrarily large input using a multi-threaded approach. Applied principals of data structures and algorithms to heavily optimize C code. Placed first of 83 students in fasted compression of 64GB of data.}
 
-%\textbf{Kayak Tour Guide:} Provincetown Aquasports \hfill May -- Aug 2016
-%Write some more words here
 
-\vspace{5pt}{\large \bf Leadership} \\*[-.8pc]
-\underline{\hspace{6in}}
+\section*{Work Experience}
+\resumeItem
+{Student Researcher: Purdue SOCET team, physical design group}
+{Jun -- Aug 2019}
+{Developed layout, place and route, and floorplanning workflows using Cadence software for the SOCET System on a Chip physical design}
 
-\textbf{Whitewater Kayaking \& Caving Consultant} \hfill Purdue Outing Club \hfill May 2016 to Dec 2019\\
-\vspace{-12pt}
-\begin{adjustwidth}{20pt}{}
-Lead and organized caving and whitewater kayaking trips. Ensured safe environment for all participants and practiced inclusive leadership within groups.\\
-\end{adjustwidth}
-\vspace{-9pt}
-\textbf{Facilitator, participant} \hfill EMV Sophomore Leadership Retreat \hfill Sep. 2016, 2017, 2018\\
-\vspace{-12pt}
-\begin{adjustwidth}{20pt}{}
-Participated in, and twice facilitated, a leadership retreat exploring inclusive leadership in the classroom and workplace.
-\end{adjustwidth}
-\textbf{Eagle Scout,} BSA \hfill 2014\\
+\resumeItem
+{Grader: ECE369 Discrete Mathematics}
+{Jan -- May 2019}
+{Graded Discrete Mathematics course assignments covering theory of computation, formal logic, graph theory, mathematical induction, state machines, and regular expressions.}
+
+\resumeItem
+{Raft Guide: Outdoor Adventure Rafting}
+{May -- Aug 2018}
+{Guided on class IV-V whitewater. Responsible for customer satisfaction and safety in demanding and dynamic workplace environment. Certified Wilderness First Responder.}
+
+\resumeItem
+{Operator: Purdue Rare Isotope Measurement Laboratory}
+{Jan 2016 -- May 2018}
+{Collected and verified data from Purdue's linear particle accelerator. Operated the accelerator during overnight shifts and responded to emergency shutdowns due to sparking in the accelerator chamber.}
+
+
+\section*{Leadership}
+\resumeItem
+{Whitewater Kayaking and Caving Consultant: Purdue Outing Club}
+{May 2016 -- Dec 2019}
+{Lead and organized caving and whitewater kayaking trips. Ensured safe environment for all participants and practiced inclusive leadership within groups.}
+
+\resumeItem
+{Facilitator, participant: EMV sophomore leadership retreat}
+{2016, 2017, 2018}
+{Participated in, and twice facilitated, a leadership retreat exploring inclusive leadership in the classroom and workplace.}
+
+\resumeItem
+{Eagle Scout: BSA}
+{2014}
+{}
+
 
 \end{document}
