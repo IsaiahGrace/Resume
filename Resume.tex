@@ -15,6 +15,7 @@
 \titleformat{\section}
 	{\normalfont\large\bfseries}{\thesection}{1em}{\vspace{-9pt}}[{\vspace{-2pt}\titlerule[0.6pt]\vspace{-3pt}}]
 
+% Allows the adjustwidth function below to indent the entire resumeItem text
 \usepackage{changepage}
 
 % I will define a new command to handle each of the entries in the sections below
@@ -62,7 +63,7 @@ ASIC design
 
 
 \section*{Technical Skills}
-\begin{tabular*}{\textwidth}{llllll}
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} l @{\extracolsep{\fill}} l @{\extracolsep{\fill}} l @{\extracolsep{\fill}} l @{\extracolsep{\fill}} l}
 	C/C\texttt{++} & Assembly & Java   & Regular Expressions & SystemVerilog    & Cadence synthesis software\\
  	Python         & Bash     & Git    & Questa-Sim          & Linux            & PowerPoint\\
  	\LaTeX         & Matlab   & Scheme & FPGA Synthesis      & Microsoft Office & KiCad PCB Layout\\
@@ -78,7 +79,7 @@ ASIC design
 \resumeItem
 {Design and test of MIPS dual core processor}
 {Sep--Dec 2019}
-{Designed, tested, implemented, and synthesized a MIPS based processor design featuring a five stage pipeline, and two cores with independent coherent L1 Caches. Used SystemVerilog to implement RTL logic and testbench scripts to validate design. Synthesized design to target an Altera Cyclone FPGA.}
+{Designed, tested, implemented, and synthesized a MIPS based processor design featuring a five stage pipeline, and two cores with independent coherent L1 caches. Used SystemVerilog to implement RTL logic and testbench scripts to validate design. Synthesized design to target an Altera Cyclone FPGA.}
 
 \resumeItem
 {Tetris hand-held game console}
@@ -115,7 +116,7 @@ ASIC design
 \resumeItem
 {Raft Guide: Outdoor Adventure Rafting}
 {May--Aug 2018}
-{Guided on class IV-V whitewater. Responsible for customer satisfaction and safety in demanding and dynamic workplace environment. Certified Wilderness First Responder.}
+{Guided on class IV-V whitewater. Responsible for customer satisfaction and safety in demanding and dynamic workplace environment. Certified wilderness first responder.}
 
 \resumeItem
 {Operator: Purdue Rare Isotope Measurement Laboratory}
@@ -127,7 +128,7 @@ ASIC design
 \resumeItem
 {Whitewater Kayaking and Caving Consultant: Purdue Outing Club}
 {May 2016 -- Dec 2019}
-{Lead and organized caving and whitewater kayaking trips. Ensured safe environment for all participants and practiced inclusive leadership within groups.}
+{Led and organized caving and whitewater kayaking trips. Ensured safe environment for all participants and practiced inclusive leadership within groups.}
 
 \resumeItem
 {Facilitator, participant: EMV sophomore leadership retreat}
