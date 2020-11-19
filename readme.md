@@ -7,6 +7,8 @@ github.com/IsaiahGrace
 (617) 901-2132
 
 
+[PDF Resume](IsaiahGraceResume.pdf)
+
 ## Education
 
 Purdue University, West Lafayette IN: GPA 3.40
