@@ -6,6 +6,16 @@
 % This is so that we don't print the page number at the bottom
 \pagestyle{empty}
 
+% This is to create hyperlinks to my portfolio website
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	urlcolor=blue
+}
+
+% Multi-line comments:
+\newcommand{\comment}[1]{}
+
 % Thanks to this StackExchange answer, we can have a horizontal line under each section
 % https://tex.stackexchange.com/questions/84061/how-can-i-make-a-bold-horizontal-rule-under-each-section-title
 \usepackage{titlesec}
@@ -30,10 +40,10 @@
 % The geometry specified here will help the text fill the page and reduce the default margins
 \usepackage{geometry}
 \geometry{
-	voffset=0.25in,
+	voffset=0.0in,
 	hoffset=0in,
 	textwidth=7in,
-	textheight=10in
+	textheight=10.5in
 	}
 
 \begin{document}
@@ -41,7 +51,7 @@
 \begin{center}
 	\Huge{Isaiah Robert Grace}\\
 	\vspace{6pt}
-	\large{(617) 901-2132 \hfill IsaiahGrace.github.io \hfill isaiah@graces.com}
+	\large{(617) 901-2132 \hfill \href{https://isaiahgrace.github.io/}{IsaiahGrace.github.io} \hfill \href{mailto:isaiah@graces.com}{isaiah@graces.com}}
 \end{center}
 
 \section*{Education}
@@ -63,24 +73,38 @@ Leadership Development
 
 \section*{Technical Skills}
 \begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} l @{\extracolsep{\fill}} l @{\extracolsep{\fill}} l @{\extracolsep{\fill}} l @{\extracolsep{\fill}} l}
-	C/C\texttt{++} & Assembly & Java   & Linux & Regular expressions & SystemVerilog \\
- 	Python         & Bash     & Git    & \LaTeX & Microsoft Office    & FPGA synthesis
+	C \& C\texttt{++} & Assembly & Embedded Systems & Git & SystemVerilog & Regular expressions\\
+ 	Python            & Bash     & Linux            & \LaTeX & FPGA synthesis & Microsoft Office
 \end{tabular*}
 
 
 \section*{Research and Project Experience}
+\resumeItem
+{\href{https://isaiahgrace.github.io/byte-size}{Independent Projects}}
+{Mar 2020--present}
+{Designed a cross platform IoT lighting system that dynamically responds to music attributes. Reverse-engineered a 1989 IBM keyboard and designed a custom PCB with an embedded RTOS, allowing use with modern computers. Created a Telegram Bot to notify me when the tide is low, for walks on the beach. 
+
+\comment {
+Python: Telegram Bot to notify low tides for walks on the beach, Curses based touch typing program\\
+Embedded Linux: musical lights system to drive several RGB LEDs at once based on Spotify track data\\
+PCB design: breakout board for IBM wheelwriter keyboard, STM32 micro-controller board with USB-C suitable for use in mechanical keyboards.\\
+Chisel based RTL for a digital wristwatch (using FOSS toolchain from code to FPGA bitstream)
+Raspberry Pi webcam
+}
+}
+
 \resumeItem
 {Senior design team: Polymorphic logic}
 {Aug--Dec 2019}
 {Investigated the design and integration of experimental ambipolar transistors using CMOS as a proxy. Personally specified, documented, and implemented the digital control modules for custom logic cells. Integrated the team project into the larger SoCET system on a chip for fabrication at MIT Lincoln Labs.}
 
 \resumeItem
-{MIPS dual-core processor}
+{\href{https://isaiahgrace.github.io/mips-cpu}{MIPS dual-core processor}}
 {Sep--Dec 2019}
 {Designed, implemented, tested, and synthesized a MIPS-based processor featuring a five stage pipeline, and two cores with independent coherent L1 caches. Used SystemVerilog to implement RTL logic and testbench scripts for design validation. Synthesized design to target an Altera Cyclone FPGA.}
 
 \resumeItem
-{Tetris hand-held game console}
+{\href{https://isaiahgrace.github.io/tetris}{Tetris hand-held game console}}
 {Mar--May 2019}
 {Developed an STM32-based handheld Tetris console as a member of a four-person team. Personally created an SPI driver for the embedded display using C\texttt{++} and assembly.}
 
@@ -109,7 +133,9 @@ Leadership Development
 \resumeItem
 {Raft Guide: Outdoor Adventure Rafting, Ocoee River, TN}
 {May--Aug 2018}
-{Guided on class IV-V whitewater. Responsible for customer satisfaction and safety in demanding and dynamic workplace environment. Certified wilderness first responder.}
+{\vspace{-0.19in}
+%Guided on class IV-V whitewater. Responsible for customer satisfaction and safety in demanding and dynamic workplace environment. Certified wilderness first responder.
+}
 
 \resumeItem
 {Operator: Purdue Rare Isotope Measurement Laboratory}
@@ -132,6 +158,5 @@ Leadership Development
 {Eagle Scout: BSA}
 {2014}
 {}
-
 
 \end{document}
