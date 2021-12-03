@@ -14,7 +14,7 @@
 }
 
 % Multi-line comments:
-\newcommand{\comment}[1]{}
+\usepackage{comment}
 
 % Thanks to this StackExchange answer, we can have a horizontal line under each section
 % https://tex.stackexchange.com/questions/84061/how-can-i-make-a-bold-horizontal-rule-under-each-section-title
@@ -80,29 +80,43 @@ Artificial Intelligence,
 ASIC Design,
 Leadership Development
 
-
 \section*{Technical Skills}
-\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} l @{\extracolsep{\fill}} l @{\extracolsep{\fill}} l @{\extracolsep{\fill}} l @{\extracolsep{\fill}} l}
-	C \& C\texttt{++} & Assembly & Embedded Systems & Git & SystemVerilog & Regular expressions\\
- 	Python            & Bash     & Linux            & \LaTeX & FPGA synthesis & Microsoft Office
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} l @{\extracolsep{\fill}} l @{\extracolsep{\fill}} l @{\extracolsep{\fill}} l}
+	C \& C\texttt{++} & Assembly & Embedded Systems & Git    & Regular expressions\\
+ 	Python            & AWS IoT  & Linux            & \LaTeX & FPGA design \& synthesis
 \end{tabular*}
 
+\section*{Work Experience}
+\resumeItem
+{Jr. Embedded Systems Engineer: Sestra Systems}
+{}
+{May 2021--present}
+{Responsible for the design and implementation of IoT embedded systems. Integrated open source device drivers utilizing C and modern C\texttt{++}. Created new hardware interfacing capabilities on existing bare-metal microcontroller boards. Developed and implemented new device software features. Managed and maintained codebases of key software packages. Leveraged AWS IoT platforms to ensure cloud-device coherence in unreliable network environments.}
+
+\resumeItem
+{Student Researcher: Purdue SoCET team, physical design group}
+{}
+{Apr--Aug 2019}
+{Developed layout, place and route, and floorplanning workflows using Cadence software for the SoCET system on a chip physical design.}
+
+\resumeItem
+{Grader: ECE369 Discrete Mathematics}
+{}
+{Jan--May 2019}
+{Graded Discrete Mathematics course assignments covering theory of computation, formal logic, graph theory, mathematical induction, state machines, and regular expressions.}
+
+\resumeItem
+{Operator: Purdue Rare Isotope Measurement Laboratory}
+{}
+{Jan 2016 -- May 2018}
+{Collected and verified data from Purdue's linear particle accelerator. Operated the accelerator during overnight shifts, participated in maintenance, and responded to emergency shutdowns.}
 
 \section*{Research and Project Experience}
 \resumeItem
 {Independent Projects}
 {https://isaiahgrace.github.io/byte-size}
 {Mar 2020--present}
-{Designed a cross platform IoT lighting system that dynamically responds to music attributes. Reverse-engineered a 1989 IBM keyboard and designed a custom PCB with an embedded RTOS, allowing use with modern computers. Created a Telegram Bot to notify me when the tide is low, for walks on the beach. 
-
-\comment {
-Python: Telegram Bot to notify low tides for walks on the beach, Curses based touch typing program\\
-Embedded Linux: musical lights system to drive several RGB LEDs at once based on Spotify track data\\
-PCB design: breakout board for IBM wheelwriter keyboard, STM32 micro-controller board with USB-C suitable for use in mechanical keyboards.\\
-Chisel based RTL for a digital wristwatch (using FOSS toolchain from code to FPGA bitstream)
-Raspberry Pi webcam
-}
-}
+{Designed an IoT lighting system that dynamically responds to music attributes. Reverse-engineered a 1989 IBM keyboard and designed a custom PCB allowing use with modern computers.}
 
 \resumeItem
 {Senior design team: Polymorphic logic}
@@ -123,44 +137,10 @@ Raspberry Pi webcam
 {Developed an STM32-based handheld Tetris console as a member of a four-person team. Personally created an SPI driver for the embedded display using C\texttt{++} and assembly.}
 
 \resumeItem
-{ASIC module for USB to AHB bridge}
-{}
-{Nov 2018}
-{Collaborated to design and test a USB to AHB bridge suitable for use on an SoC. Personally designed and wrote SystemVerilog code for the USB receiving/decoding submodule.}
-
-\resumeItem
 {First place in ECE368: Data Structures \& Algorithms ``big data challenge"}
 {}
 {Oct 2017}
 {Designed and optimized a Huffman encoding algorithm of an arbitrarily-large input using a multi-threaded approach. Applied principals of data structures and algorithms to heavily optimize C code. Placed first of 83 students for fastest compression of 64GB of data.}
-
-
-\section*{Work Experience}
-\resumeItem
-{Student Researcher: Purdue SoCET team, physical design group}
-{}
-{Apr--Aug 2019}
-{Developed layout, place and route, and floorplanning workflows using Cadence software for the SoCET system on a chip physical design.}
-
-\resumeItem
-{Grader: ECE369 Discrete Mathematics}
-{}
-{Jan--May 2019}
-{Graded Discrete Mathematics course assignments covering theory of computation, formal logic, graph theory, mathematical induction, state machines, and regular expressions.}
-
-\resumeItem
-{Raft Guide: Outdoor Adventure Rafting, Ocoee River, TN}
-{}
-{May--Aug 2018}
-{\vspace{-0.19in}
-%Guided on class IV-V whitewater. Responsible for customer satisfaction and safety in demanding and dynamic workplace environment. Certified wilderness first responder.
-}
-
-\resumeItem
-{Operator: Purdue Rare Isotope Measurement Laboratory}
-{}
-{Jan 2016 -- May 2018}
-{Collected and verified data from Purdue's linear particle accelerator. Operated the accelerator during overnight shifts, participated in maintenance, and responded to emergency shutdowns.}
 
 
 \section*{Leadership}
