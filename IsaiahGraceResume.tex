@@ -1,5 +1,5 @@
 %% Isaiah Grace
-%% May 14 2020
+%% April 17 2023
 
 \documentclass[10pt,letterpaper]{article}
 
@@ -13,14 +13,12 @@
 	urlcolor=blue
 }
 
-% Multi-line comments:
-\usepackage{comment}
-
 % Thanks to this StackExchange answer, we can have a horizontal line under each section
 % https://tex.stackexchange.com/questions/84061/how-can-i-make-a-bold-horizontal-rule-under-each-section-title
+% titlesec is included in the Arch linux package group texlive-most
 \usepackage{titlesec}
 \titleformat{\section}
-	{\normalfont\large\bfseries}{\thesection}{1em}{\vspace{-9pt}}[{\vspace{-2pt}\titlerule[0.6pt]\vspace{-3pt}}]
+	{\normalfont\Large\bfseries}{\thesection}{1em}{\vspace{-9pt}}[{\vspace{-1pt}\titlerule[0.6pt]\vspace{-3pt}}]
 
 % Allows the adjustwidth function below to indent the entire resumeItem text
 \usepackage{changepage}
@@ -45,10 +43,21 @@
 	\endgroup
 }
 
+% Define a new command to handle each of the entries in the sections below
+%\shortResumeItem
+%{Title}
+%{Dates}
+\newcommand{\shortResumeItem}[2]{
+	\begingroup
+	\textbf{#1}
+	\hfill #2\\
+	\endgroup
+}
+
 % The geometry specified here will help the text fill the page and reduce the default margins
 \usepackage{geometry}
 \geometry{
-	voffset=0.1in,
+	voffset=0.3in,
 	hoffset=0in,
 	textwidth=7.5in,
 	textheight=11in
@@ -57,8 +66,8 @@
 \begin{document}
 \raggedright
 \begin{center}
-	\Huge{Isaiah Robert Grace}\\
-	\vspace{6pt}
+	\Huge{Isaiah Grace}\\
+	\vspace{10pt}
 	\large{\href{tel:+1617-901-2132}{(617) 901-2132} \hfill 
 	\href{https://isaiahgrace.github.io/}{IsaiahGrace.github.io} \hfill
 	\href{mailto:isaiah@graces.com}{isaiah@graces.com}}
@@ -71,6 +80,7 @@ Minor in History \textbf{Minor GPA: 3.93}
 
 \vspace{2pt}
 Relevant Coursework:
+Digital Signal Processing
 Data Structures \& Algorithms,
 Computer Architecture,
 Microcontrollers,
@@ -82,28 +92,33 @@ Leadership Development
 
 \section*{Technical Skills}
 \begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} l @{\extracolsep{\fill}} l @{\extracolsep{\fill}} l @{\extracolsep{\fill}} l @{\extracolsep{\fill}} l}
-	C \& C\texttt{++} & Assembly & Embedded Systems & Git    & Regular expressions      & Rust\\
- 	Python            & AWS IoT  & Linux            & \LaTeX & FPGA design \& synthesis & Circuit design
+	C \& C\texttt{++} & Assembly & Embedded Systems & Git & Regular expressions      & Rust\\
+ 	Python            & AWS IoT  & Linux            & Zig & FPGA design \& synthesis & Circuit design
 \end{tabular*}
 
 \section*{Work Experience}
+
+\resumeItem
+{Embedded Software Developer: ASML via Actalent Services}
+{}
+{Jul 2022--Present}
+{Responsible for the implementation of high reliability and high performance C driver firmware, enabling next-gen semiconductor manufacturing. Designed, developed, and tested modular driver and subsystem components in a highly distributed and hard real-time environment.}
+
 \resumeItem
 {Embedded Systems Engineer: Sestra Systems}
 {}
-{Mar 2022--present}
-{Responsible for the design and implementation of IoT embedded systems. Integrated open source device drivers utilizing C and modern C\texttt{++}. Created new hardware interfacing capabilities on existing bare-metal microcontroller boards. Developed and implemented new device software features. Managed and maintained codebases of key software packages.}
-
-\resumeItem
-{Jr. Embedded Systems Engineer: Sestra Systems}
-{}
-{May 2021--Mar 2022}
-{Responsible for the maintence and enhancement of embedded systems. Leveraged AWS IoT platforms to ensure cloud-device coherence in unreliable network environments.}
+{May 2021--Jun 2022}
+{Responsible for the design and implementation of IoT embedded systems.
+Architected and implemented new subsystems in a multi-threaded and multi-process distributed system.
+Designed hardware drivers on extremely resource constrained bare-metal microcontroller boards.
+Reverse-engineered a BLE Bluetooth protocol to develop a custom driver and control system for off the shelf hardware.
+Integrated open source device drivers utilizing C and modern C\texttt{++}.}
 
 \resumeItem
 {Student Researcher: Purdue SoCET team, physical design group}
 {}
 {Apr--Aug 2019}
-{Developed layout, place and route, and floorplanning workflows using Cadence software for the SoCET system on a chip physical design.}
+{Developed layout, place and route, and floorplanning workflows for the physical design of an experimental research microcontroller eventually fabricated at MIT Lincoln Labs.}
 
 \resumeItem
 {Grader: ECE369 Discrete Mathematics}
@@ -118,11 +133,6 @@ Leadership Development
 {Collected and verified data from Purdue's linear particle accelerator. Operated the accelerator during overnight shifts, participated in maintenance, and responded to emergency shutdowns.}
 
 \section*{Research and Project Experience}
-\resumeItem
-{Independent Projects}
-{https://isaiahgrace.github.io/byte-size}
-{Mar 2020--present}
-{Designed an IoT lighting system that dynamically responds to music attributes. Reverse-engineered a 1989 IBM keyboard and designed a custom PCB allowing use with modern computers.}
 
 \resumeItem
 {Senior design team: Polymorphic logic}
@@ -131,16 +141,16 @@ Leadership Development
 {Investigated the design and integration of experimental ambipolar transistors using CMOS as a proxy. Personally specified, documented, and implemented the digital control modules for custom logic cells. Integrated the team project into the larger SoCET system on a chip for fabrication at MIT Lincoln Labs.}
 
 \resumeItem
-{MIPS dual-core processor}
-{https://isaiahgrace.github.io/mips-cpu}
-{Sep--Dec 2019}
-{Designed, implemented, tested, and synthesized a MIPS-based processor featuring a five stage pipeline, and two cores with independent coherent L1 caches. Used SystemVerilog to implement RTL logic and testbench scripts for design validation. Synthesized design to target an Altera Cyclone FPGA.}
-
-\resumeItem
 {Tetris hand-held game console}
 {https://isaiahgrace.github.io/tetris}
 {Mar--May 2019}
 {Developed an STM32-based handheld Tetris console as a member of a four-person team. Personally created an SPI driver for the embedded display using C\texttt{++} and assembly.}
+
+\resumeItem
+{MIPS dual-core processor}
+{https://isaiahgrace.github.io/mips-cpu}
+{Sep--Dec 2019}
+{Designed, implemented, tested, and synthesized a MIPS-based processor featuring a five stage pipeline, and two cores with independent coherent L1 caches. Used SystemVerilog to implement RTL logic and testbench scripts for design validation. Synthesized design to target an Altera Cyclone FPGA.}
 
 \resumeItem
 {First place in ECE368: Data Structures \& Algorithms ``big data challenge"}
@@ -148,24 +158,17 @@ Leadership Development
 {Oct 2017}
 {Designed and optimized a Huffman encoding algorithm of an arbitrarily-large input using a multi-threaded approach. Applied principals of data structures and algorithms to heavily optimize C code. Placed first of 83 students for fastest compression of 64GB of data.}
 
-
 \section*{Leadership}
-\resumeItem
+\shortResumeItem
 {Whitewater Kayaking and Caving Consultant: Purdue Outing Club}
-{}
 {May 2016 -- Dec 2019}
-{Taught caving and whitewater kayaking skills from beginner through advanced levels. Organized and led expeditions. Ensured safe environment for all participants and practiced inclusive leadership within groups.}
 
-\resumeItem
-{Facilitator, participant: EMV sophomore leadership retreat}
-{}
+\shortResumeItem
+{Facilitator: EMV sophomore leadership retreat}
 {2016, 2017, 2018}
-{Participated in, and twice facilitated, a leadership retreat exploring inclusive leadership in the classroom and community.}
 
-\resumeItem
+\shortResumeItem
 {Eagle Scout: BSA}
-{}
 {2014}
-{}
 
 \end{document}

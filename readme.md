@@ -4,7 +4,6 @@ isaiah@graces.com
 
 https://isaiahgrace.github.io/
 
-(617) 901-2132
 
 [PDF Resume](IsaiahGraceResume.pdf)
 
@@ -12,7 +11,7 @@ https://isaiahgrace.github.io/
 
 Purdue University, West Lafayette IN: GPA 3.40
 
-Bachelor of Science in Computer Engineering, Minor in History
+2019 Bachelor of Science in Computer Engineering, Minor in History
 
 
 ## Relevant Coursework
@@ -27,38 +26,34 @@ Bachelor of Science in Computer Engineering, Minor in History
 
 
 ## Technical Skills
-* Assembly
-* Bash
 * C
 * C++
-* Cadence Innovus
-* Cadence Virtuoso
+* Rust
+* Zig
+* Linux
+* Assembly
+* Bash
 * FPGA synthesis
 * Git
-* Java
-* KiCad PCB layout
+* PCB layout
 * LaTeX
-* Linux
 * Matlab
-* Microsoft Office
 * Python
-* Questa sim
 * Regular expressions
-* Rust
 * Scheme
 * SystemVerilog
 
 
 ## Work Experience
 
-### Embedded Systems Engineer: Sestra Systems: Mar 2022 to present
-Responsible for the design and implementation of IoT embedded systems. Integrated open source device drivers utilizing C and modern C++. Created new hardware interfacing capabilities on existing bare-metal microcontroller boards. Developed and implemented new device software features. Managed and maintained codebases of key software packages.
+### Embedded Software Developer: ASML via Actalent Services: Jul 2022 to Present
+Responsible for the implementation of high reliability and high performance C driver firmware, enabling next-gen semiconductor manufacturing. Designed, developed, and tested modular driver and subsystem components in a highly distributed and hard real-time environment.
 
-### Jr. Embedded Systems Engineer: Sestra Systems: May 2021 to Mar 2022
-Responsible for the maintence and enhancement of embedded systems. Leveraged AWS IoT platforms to ensure cloud-device coherence in unreliable network environments.
+### Embedded Systems Engineer: Sestra Systems: May 2021 to Jun 2022
+Responsible for the design and implementation of IoT embedded systems. Architected and implemented new subsystems in a multi-threaded and multi-process distributed system. Designed hardware drivers on extremely resource constrained bare-metal microcontroller boards. Reverse-engineered a BLE Bluetooth protocol to develop a custom driver and control system for off the shelf hardware. Integrated open source device drivers utilizing C and modern C++.
 
 ### Student Researcher: Purdue SoCET team, physical design group: Apr to Aug 2019
-Developed layout, place and route, and floorplanning workflows using Cadence software for the SoCET system on a chip physical design.
+Developed layout, place and route, and floorplanning workflows for the physical design of an experimental research microcontroller eventually fabricated at MIT Lincoln Labs.
 
 ### Grader: ECE369 Discrete Mathematics: Jan to May 2019
 Graded Discrete Mathematics course assignments covering theory of computation, formal logic, graph theory, mathematical induction, state machines, and regular expressions.
@@ -97,3 +92,13 @@ Taught caving and whitewater kayaking skills from beginner through advanced leve
 Participated in, and twice facilitated, a leadership retreat exploring inclusive leadership in the classroom and community.
 
 ### Eagle Scout, BSA: 2014
+
+## Compiling this document
+On Arch Linux with the `texlive-most` package group installed, this command should rebuild the document:
+```shell
+pdflatex -interaction=nonstopmode IsaiahGraceResume.tex
+```
+To automatically rebuild the PDF when the `.tex` file changes:
+```shell
+while inotifywait -e close_write IsaiahGraceResume.tex; do pdflatex -interaction=nonstopmode IsaiahGraceResume.tex; done
+```
