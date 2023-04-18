@@ -47,7 +47,7 @@ Purdue University, West Lafayette IN: GPA 3.40
 ## Work Experience
 
 ### Embedded Software Developer: ASML via Actalent Services: Jul 2022 to Present
-Responsible for the implementation of high reliability and high performance C driver firmware, enabling next-gen semiconductor manufacturing. Designed, developed, and tested modular driver and subsystem components in a highly distributed and hard real-time environment.
+Responsible for the implementation of high reliability and high performance C driver firmware, enabling next-gen semiconductor manufacturing. Designed, developed, and tested modular driver and subsystem components in a highly distributed and real-time environment.
 
 ### Embedded Systems Engineer: Sestra Systems: May 2021 to Jun 2022
 Responsible for the design and implementation of IoT embedded systems. Architected and implemented new subsystems in a multi-threaded and multi-process distributed system. Designed hardware drivers on extremely resource constrained bare-metal microcontroller boards. Reverse-engineered a BLE Bluetooth protocol to develop a custom driver and control system for off the shelf hardware. Integrated open source device drivers utilizing C and modern C++.
